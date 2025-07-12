@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<LINK REL="stylesheet" HREF="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <title>Malla Interactiva - Ingeniería Comercial</title>
+    <style>
+        body {
+            font-family: 'AMATIC SC', cursive;
+            background: #f5f5f5;
+            padding: 20px;
+            color: #333;
+            font-size: 15px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            table-layout: fixed;
+        }
+        th, td {
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            text-align: center;
+            vertical-align: top;
+        }
+        th {
+            background-color: #ffb6c1;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            font-family: Arial, sans-serif; /* Cambié a Arial en negrita */
+        }
+        .ramo {
+            background-color: #ff69b4;
+            color: white;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            user-select: none;
+            font-weight: bold;
+            text-align: center;
+            width: 100%; /* Ajustamos el ancho para que sea más amplio */
+            margin-left: -10px; 
+          
+        }
+        .ramo.locked {
+            background-color: #d3d3d3;
+            cursor: not-allowed;
+            opacity: 0.6;
+        
+        }
+        .ramo.aprobado { 
+            background-color: #17a399;
+            text-decoration: line-through;  black
+            heigth: 10px;
+            background-color: #17a399 !important;
+
+          
+        }
+        .titulo-semestre {
+            background-color: #ff0091;
+            color: white;
+            font-size: 30px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<h2>Malla Interactiva - Ingeniería Comercial</h2>
+<p>Haz clic en los ramos para aprobar/desaprobar. Solo puedes aprobar si tienes los requisitos cumplidos.</p>
+<table>
+    <tr>
+        <th>Semestre 1</th><th>Semestre 2</th><th>Semestre 3</th><th>Semestre 4</th><th>Semestre 5</th><th>Semestre 6</th><th>Semestre 7</th><th>Semestre 8</th><th>Semestre 9</th><th>Semestre 10</th>
+    </tr>
+    <tr>
+        <td><div class="ramo" data-id="1" data-req="">Matemáticas I</div><div class="ramo" data-id="2" data-req="">Taller de computación</div><div class="ramo" data-id="3" data-req="">Introduccion a la economía</div><div class="ramo" data-id="4" data-req="">Introduccion a la administracion</div><div class="ramo" data-id="5" data-req="">Etica y RSE</div><div class="ramo" data-id="6" data-req="">Contabilidad general</div><div class="ramo" data-id="7" data-req="">Taller de comunicaciones I</div></td><td><div class="ramo" data-id="8" data-req="1">Matemáticas II</div><div class="ramo" data-id="9" data-req="1">Algebra lineal</div><div class="ramo" data-id="10" data-req="3">Principios de microeconomia</div><div class="ramo" data-id="11" data-req="4">Teoria administrativa</div><div class="ramo" data-id="12" data-req="7">Taller de comunicaciones II</div><div class="ramo" data-id="13" data-req="">Ingles I</div></td><td><div class="ramo" data-id="14" data-req="8,9">Matemáticas III</div><div class="ramo" data-id="15" data-req="8">Estadisticas I</div><div class="ramo" data-id="16" data-req="3">Principos de macroeconomía</div><div class="ramo" data-id="17" data-req="5">Derecho y empresa I</div><div class="ramo" data-id="18" data-req="6">Contabilidad financiera</div><div class="ramo" data-id="19" data-req="13">Ingles II</div></td><td><div class="ramo" data-id="24" data-req="14,15">Investigacion de operaciones</div><div class="ramo" data-id="20" data-req="15">Inferencia Estadística para Administración</div><div class="ramo" data-id="21" data-req="10,16">Organización Industrial</div><div class="ramo" data-id="22" data-req="17">Derecho y Empresa II</div><div class="ramo" data-id="23" data-req="18">Sistema de Costos y Toma de Decisiones</div><div class="ramo" data-id="25" data-req="12">Habilidades para la Organización I</div></td><td><div class="ramo" data-id="29" data-req="25,15">Gestión de Operaciones</div><div class="ramo" data-id="26" data-req="11">Comportamiento Organizacional</div><div class="ramo" data-id="27" data-req="23,22">Finanzas I</div><div class="ramo" data-id="28" data-req="11,10">Marketing I</div><div class="ramo" data-id="30" data-req="25">Habilidades para la Organización II</div><div class="ramo" data-id="31" data-req="19">Inglés para la Adm. y Economía III</div></td><td><div class="ramo" data-id="36" data-req="29,21">Comportamiento Social y Toma de Decisiones</div><div class="ramo" data-id="32" data-req="20">Transformación Digital I</div><div class="ramo" data-id="33" data-req="26">Gestión de Personas I</div><div class="ramo" data-id="34" data-req="27">Finanzas II</div><div class="ramo" data-id="35" data-req="28">Marketing II</div><div class="ramo" data-id="37" data-req="">Práctica I: Apresto Organizacional</div></td><td><div class="ramo" data-id="38" data-req="32">Transformación Digital II</div><div class="ramo" data-id="41" data-req="33">Gestión de Personas II</div><div class="ramo" data-id="39" data-req="">Negocios y Sostenibilidad</div><div class="ramo" data-id="40" data-req="37">Acción y Sostenibilidad</div><div class="ramo" data-id="42" data-req="34">Finanzas III</div><div class="ramo" data-id="43" data-req="35">Marketing III</div><div class="ramo" data-id="44" data-req="31">Inglés para la Adm. y Economía IV</div></td><td><div class="ramo" data-id="45" data-req="38">Transformación Digital III</div><div class="ramo" data-id="48" data-req="41,42,43">Estrategia de Negocios</div><div class="ramo" data-id="46" data-req="41,43,38">Implementación y Control Estratégico</div><div class="ramo" data-id="47" data-req="39,40">Capacidad Emprendedora</div><div class="ramo" data-id="49" data-req="30">Habilidades para la Organización III</div><div class="ramo" data-id="50" data-req="38,41,42,43">Examen de Grado</div></td><td><div class="ramo" data-id="51" data-req="38,41,43">Electivo Especialidad I:</div><div class="ramo" data-id="52" data-req="38,41,43">Electivo Especialidad II:</div><div class="ramo" data-id="53" data-req="38,41,43">Electivo Especialidad III:</div><div class="ramo" data-id="54" data-req="38,41,43">Electivo Especialidad IV:</div><div class="ramo" data-id="55" data-req="38,41,43">Electivo Especialidad V:</div></td><td><div class="ramo" data-id="56" data-req="38,41,43">Electivo Especialidad VI:</div><div class="ramo" data-id="57" data-req="38,41,43">Electivo Especialidad VII:</div><div class="ramo" data-id="58" data-req="">Práctica II: Profesional</div></td>
+    </tr>
+</table>
+
+<script>
+const ramos = document.querySelectorAll('.ramo');
+const aprobados = new Set();
+
+ramos.forEach(ramo => {
+  ramo.addEventListener('click', () => {
+    const id = parseInt(ramo.dataset.id);
+    const requisitos = ramo.dataset.req ? ramo.dataset.req.split(',').map(Number) : [];
+    const estaAprobado = ramo.classList.contains('aprobado');
+
+    if (estaAprobado) {
+      aprobados.delete(id);
+      ramo.classList.remove('aprobado');
+    } else {
+      const requisitosCumplidos = requisitos.every(req => aprobados.has(req));
+      if (!requisitosCumplidos) {
+        alert('No puedes aprobar este ramo aún. Faltan prerrequisitos.');
+        return;
+      }
+      aprobados.add(id);
+      ramo.classList.add('aprobado');
+    }
+
+    actualizarBloqueos();
+  });
+});
+
+function actualizarBloqueos() {
+  ramos.forEach(ramo => {
+    const id = parseInt(ramo.dataset.id);
+    const requisitos = ramo.dataset.req ? ramo.dataset.req.split(',').map(Number) : [];
+    const requisitosCumplidos = requisitos.every(req => aprobados.has(req));
+
+    if (!aprobados.has(id) && requisitos.length > 0 && !requisitosCumplidos) {
+      ramo.classList.add('locked');
+    } else {
+      ramo.classList.remove('locked');
+    }
+  });
+}
+
+actualizarBloqueos();
+</script>
+
+</body>
+</html>
